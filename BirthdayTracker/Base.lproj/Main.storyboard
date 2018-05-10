@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Birthdays" id="ne8-hK-sjU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Kh-AO-bFK">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="BrN-Hv-UzE"/>
+                                <segue destination="J1j-U3-AU9" kind="presentation" id="BrN-Hv-UzE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -45,24 +45,102 @@
             </objects>
             <point key="canvasLocation" x="226.40000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Birthday-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BirthdayTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1j-kp-k1t">
+                                <rect key="frame" x="20" y="100" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Haz-7X-7cE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-hm-YuP">
+                                <rect key="frame" x="20" y="170" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RQQ-FQ-ZfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-jf-mdX">
+                                <rect key="frame" x="20" y="250" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DYS-2M-537"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enw-V7-vDf">
+                                <rect key="frame" x="20" y="130" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vej-le-au1"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34U-TQ-QNF">
+                                <rect key="frame" x="20" y="200" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rLS-TJ-Mt2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-f7-HrS">
+                                <rect key="frame" x="0.0" y="280" width="375" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="547639971.223557">
+                                    <!--2018-05-10 10:12:51 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="enw-V7-vDf" firstAttribute="trailing" secondItem="34U-TQ-QNF" secondAttribute="trailing" id="2bh-nm-ymP"/>
+                            <constraint firstItem="Pl8-hm-YuP" firstAttribute="leading" secondItem="34U-TQ-QNF" secondAttribute="leading" id="64W-XH-OvV"/>
+                            <constraint firstItem="Z1j-kp-k1t" firstAttribute="trailing" secondItem="Pl8-hm-YuP" secondAttribute="trailing" id="8UW-jx-fFr"/>
+                            <constraint firstItem="Z1j-kp-k1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9uc-qy-9WX"/>
+                            <constraint firstItem="enw-V7-vDf" firstAttribute="leading" secondItem="Pl8-hm-YuP" secondAttribute="leading" id="CKU-Ft-5xX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1j-kp-k1t" secondAttribute="trailing" constant="255" id="CW1-v7-27N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JwV-f7-HrS" secondAttribute="bottom" constant="181" id="E8x-gH-P37"/>
+                            <constraint firstItem="34U-TQ-QNF" firstAttribute="leading" secondItem="2Bs-jf-mdX" secondAttribute="leading" id="Hem-cU-r78"/>
+                            <constraint firstItem="Pl8-hm-YuP" firstAttribute="trailing" secondItem="2Bs-jf-mdX" secondAttribute="trailing" id="Keq-0v-xC6"/>
+                            <constraint firstItem="Pl8-hm-YuP" firstAttribute="top" secondItem="enw-V7-vDf" secondAttribute="bottom" constant="10" id="Rq8-v4-DkS"/>
+                            <constraint firstItem="JwV-f7-HrS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TIQ-GM-TId"/>
+                            <constraint firstItem="34U-TQ-QNF" firstAttribute="centerX" secondItem="JwV-f7-HrS" secondAttribute="centerX" id="X0a-od-mWB"/>
+                            <constraint firstItem="JwV-f7-HrS" firstAttribute="top" secondItem="2Bs-jf-mdX" secondAttribute="bottom" constant="9" id="YnX-3T-Fyo"/>
+                            <constraint firstItem="2Bs-jf-mdX" firstAttribute="top" secondItem="34U-TQ-QNF" secondAttribute="bottom" constant="20" id="aD9-nA-k1D"/>
+                            <constraint firstAttribute="trailing" secondItem="JwV-f7-HrS" secondAttribute="trailing" id="i6m-ol-2CF"/>
+                            <constraint firstItem="Z1j-kp-k1t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="oQr-Zr-h5g"/>
+                            <constraint firstItem="enw-V7-vDf" firstAttribute="top" secondItem="Z1j-kp-k1t" secondAttribute="bottom" constant="9" id="uGp-D5-Asr"/>
+                            <constraint firstItem="34U-TQ-QNF" firstAttribute="top" secondItem="Pl8-hm-YuP" secondAttribute="bottom" constant="9" id="uX2-U3-hqi"/>
+                            <constraint firstItem="Z1j-kp-k1t" firstAttribute="leading" secondItem="enw-V7-vDf" secondAttribute="leading" id="zFj-H0-NqV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="add" id="9r3-NQ-Fvf"/>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" title="Add Birthday" id="UND-Zx-Az7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wRE-Xh-Rqs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wvw-H3-cMH"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u47-2I-mD0">
@@ -81,6 +159,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVN-nl-6VF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-714.39999999999998" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tAp-jH-v8P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J1j-U3-AU9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Za3-ds-J70">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3D5-05-h3c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-Vr-37u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
