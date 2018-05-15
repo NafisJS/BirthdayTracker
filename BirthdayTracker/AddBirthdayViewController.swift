@@ -36,10 +36,6 @@ class AddBirthdayViewController: UIViewController {
         newBirthday.birthdate = birthdate
         newBirthday.birthdayId = UUID().uuidString
         
-        if let uniqueID = newBirthday.birthdayId {
-            print("birthdayID: \(uniqueID)")
-        }
-        
         do {
             try context.save()
             let message = "Сегодня \(firstName) \(lastName) празднует день рождения!"
@@ -65,11 +61,6 @@ class AddBirthdayViewController: UIViewController {
         }
         
         dismiss(animated: true, completion: nil)
-        
-        print("Create record about birthday!")
-        print("Name: \(newBirthday.firstName)")
-        print("Last Name: \(newBirthday.lastName)")
-        print("Birthdate: \(newBirthday.birthdate)")
     }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {

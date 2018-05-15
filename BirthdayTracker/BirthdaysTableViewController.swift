@@ -24,6 +24,7 @@ class BirthdaysTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = Birthday.fetchRequest() as NSFetchRequest<Birthday>
@@ -103,10 +104,10 @@ class BirthdaysTableViewController: UITableViewController {
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        
     }
-    */
 
+     */
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -114,5 +115,18 @@ class BirthdaysTableViewController: UITableViewController {
         return true
     }
     */
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "detailBirthdayId",
+            let destination = segue.destination as? DetailBirthdayViewController,
+            let birthdayIndex = tableView.indexPathForSelectedRow?.row
+        {
+            destination.firstName = birthdays[birthdayIndex].firstName!
+            destination.lastName = birthdays[birthdayIndex].lastName!
+            destination.birthdate = birthdays[birthdayIndex].birthdate!
+        }
+    }
+
 
 }

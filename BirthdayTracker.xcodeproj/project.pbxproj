@@ -14,6 +14,7 @@
 		3CCF84B320A437440027F4C8 /* BirthdayTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF84B120A437440027F4C8 /* BirthdayTracker.xcdatamodeld */; };
 		3CCF84B520A437490027F4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF84B420A437490027F4C8 /* Assets.xcassets */; };
 		3CCF84B820A437490027F4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF84B620A437490027F4C8 /* LaunchScreen.storyboard */; };
+		3CED836920AADC5B0047400B /* DetailBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED836820AADC5B0047400B /* DetailBirthdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3CCF84B420A437490027F4C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CCF84B720A437490027F4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCF84B920A437490027F4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CED836820AADC5B0047400B /* DetailBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBirthdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3CCF84B920A437490027F4C8 /* Info.plist */,
 				3CCF84B120A437440027F4C8 /* BirthdayTracker.xcdatamodeld */,
 				3C8454EC20A5E7BE00F6D4CC /* BirthdaysTableViewController.swift */,
+				3CED836820AADC5B0047400B /* DetailBirthdayViewController.swift */,
 			);
 			path = BirthdayTracker;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CED836920AADC5B0047400B /* DetailBirthdayViewController.swift in Sources */,
 				3C8454ED20A5E7BE00F6D4CC /* BirthdaysTableViewController.swift in Sources */,
 				3CCF84AD20A437440027F4C8 /* AddBirthdayViewController.swift in Sources */,
 				3CCF84B320A437440027F4C8 /* BirthdayTracker.xcdatamodeld in Sources */,
